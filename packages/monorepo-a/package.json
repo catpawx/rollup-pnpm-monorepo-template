@@ -1,0 +1,29 @@
+{
+  "name": "@catpawx/monorepo-a",
+  "version": "0.0.1",
+  "description": "🐾 猫爪联盟前端团队 monorepo-a",
+  "authors": [
+    "相甫 <xiangfu_git@163.com>"
+  ],
+  "homepage": "https://github.com/catpawx/rollup-pnpm-monorepo-template#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {},
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catpawx/rollup-pnpm-monorepo-template.git"
+  },
+  "keywords": [
+    "rollup-pnpm-monorepo-template"
+  ],
+  "bugs": {
+    "url": "https://github.com/catpawx/rollup-pnpm-monorepo-template/issues"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "@catpawx/rollup-pnpm-monorepo-template",
+  "version": "0.0.0",
+  "description": "🐾 猫爪联盟前端团队 rollup-pnpm-monorepo的模板项目",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "rollup-pnpm-monorepo-template"
+  ],
+  "authors": [
+    "相甫 <xiangfu_git@163.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/catpawx/rollup-pnpm-monorepo-template/issues"
+  },
+  "homepage": "https://github.com/catpawx/rollup-pnpm-monorepo-template",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "husky install",
+    "prepublishOnly": "pnpm run build",
+    "lint-staged": "lint-staged --allow-empty",
+    "lint": "eslint packages --fix --ext .js",
+    "lint:ts": "tsc --noEmit && eslint packages --ext .ts,.tsx",
+    "prettier": "prettier --write 'packages/**/*.{js,json,yml,yaml,css,scss,less,ts,tsx,md}'",
+    "clean": "rimraf packages/**/node_modules && rimraf node_modules",
+    "build": "npm run clean && rollup -c",
+    "commit": "git-cz",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "devDependencies": {
+    "@catpawx/commitlint-config-preset": "^0.1.0",
+    "@catpawx/eslint-config-preset": "^2.0.0",
+    "@catpawx/prettier-config-preset": "^2.0.0",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.6",
+    "@commitlint/cli": "^19.3.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.9.3",
+    "eslint": "^8.12.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.17.2",
+    "tslib": "^2.6.2",
+    "typescript": "5.4.5"
+  }
+}

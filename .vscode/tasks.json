@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": ["$tsc"],
+      "group": "build",
+      "label": "tsc: build - tsconfig.json"
+    },
+    // 执行npm命令
+    {
+      "type": "shell",
+      "command": "npm run build:dev",
+      "group": "build",
+      "label": "npm run build:dev"
+    }
+  ]
+}
