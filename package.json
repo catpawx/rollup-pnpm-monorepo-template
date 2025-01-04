@@ -16,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "husky install",
+    "prepare": "husky",
     "prepublishOnly": "pnpm run build",
     "lint-staged": "lint-staged --allow-empty",
     "lint": "eslint packages --fix --ext .js",
@@ -31,7 +31,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+      "eslint --fix",
+      "git add"
     ]
   },
   "config": {
@@ -61,5 +62,4 @@
     "tslib": "^2.6.2",
     "typescript": "5.4.5"
   }
- 
 }
