@@ -7,11 +7,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/src/index.ts",
-      // "preLaunchTask": "tsc: build - tsconfig.json",
-      "preLaunchTask": "npm run build:dev",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      "name": "调试monorepo-a",
+      "cwd": "${workspaceFolder}/packages/monorepo-a",
+      "program": "${workspaceFolder}/packages/monorepo-a/src/index.ts",
+      "preLaunchTask": "npm: build",
+      "outFiles": ["${workspaceFolder}/packages/monorepo-a/dist/**/*.js"]
     }
   ]
 }

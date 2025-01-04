@@ -1,14 +1,7 @@
 {
   "version": "2.0.0",
   "tasks": [
-    {
-      "type": "typescript",
-      "tsconfig": "tsconfig.json",
-      "problemMatcher": ["$tsc"],
-      "group": "build",
-      "label": "tsc: build - tsconfig.json"
-    },
-    // 执行npm命令
+    // 执行npm命令，当preLaunchTask超出默认的npm命令时，需要在tasks.json中配置
     {
       "type": "shell",
       "command": "npm run build:dev",

@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "🐾 猫爪联盟前端团队 rollup-pnpm-monorepo的模板项目",
   "private": true,
-  "type": "module",
   "keywords": [
     "rollup-pnpm-monorepo-template"
   ],
@@ -24,7 +23,7 @@
     "lint:ts": "tsc --noEmit && eslint packages --ext .ts,.tsx",
     "prettier": "prettier --write 'packages/**/*.{js,json,yml,yaml,css,scss,less,ts,tsx,md}'",
     "clean": "rimraf packages/**/node_modules && rimraf node_modules",
-    "build": "npm run clean && rollup -c",
+    "build": "rimraf packages/**/dist && rollup -c",
     "commit": "git-cz",
     "changeset": "changeset",
     "version": "changeset version",
@@ -50,6 +49,7 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+     "rollup-plugin-dts": "^6.1.1",
     "commitizen": "^4.3.0",
     "cz-git": "^1.9.3",
     "eslint": "^8.12.0",
@@ -61,4 +61,5 @@
     "tslib": "^2.6.2",
     "typescript": "5.4.5"
   }
+ 
 }
